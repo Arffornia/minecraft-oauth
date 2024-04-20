@@ -1,9 +1,9 @@
 {
-    "name": "aberdeener/minecraft-oauth",
-    "description": "Provides easy layer to get a Minecraft profile from a Microsoft Live OAuth session",
+    "name": "Arffornia/minecraft-oauth",
+    "description": "Fork from aberdeener, updated to php8 for laravel11 compatibility, provides easy layer to get a Minecraft profile from a Microsoft Live OAuth session",
     "require": {
         "guzzlehttp/guzzle": "^7.5",
-        "ramsey/uuid": "^3.9",
+        "ramsey/uuid": "^4.7",
         "symfony/polyfill-php80": "^1.27"
     },
     "require-dev": {
@@ -12,7 +12,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Aberdeener\\MinecraftOauth\\": "src/"
+            "Arffornia\\MinecraftOauth\\": "src/"
         }
     },
     "autoload-dev": {
@@ -24,6 +24,9 @@
         {
             "name": "Tadhg Boyle",
             "email": "tadhgsmboyle@gmail.com"
+        },
+        {
+            "name": "TheGostsniperfr"
         }
     ],
     "config": {
@@ -31,7 +34,7 @@
             "pestphp/pest-plugin": true
         },
         "platform": {
-            "php": "7.4"
+            "php": "8.2"
         }
     }
 }
