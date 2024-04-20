@@ -1,5 +1,5 @@
 {
-    "name": "Arffornia/minecraft-oauth",
+    "name": "arffornia/minecraft-oauth",
     "description": "Fork from aberdeener, updated to php8 for laravel11 compatibility, provides easy layer to get a Minecraft profile from a Microsoft Live OAuth session",
     "require": {
         "guzzlehttp/guzzle": "^7.5",
