@@ -1,6 +1,6 @@
 <?php
 
-namespace Aberdeener\MinecraftOauth\Exceptions;
+namespace Arffornia\MinecraftOauth\Exceptions;
 
 use Exception;
 

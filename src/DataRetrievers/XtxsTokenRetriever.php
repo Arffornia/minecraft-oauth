@@ -1,9 +1,9 @@
 <?php
 
-namespace Aberdeener\MinecraftOauth\DataRetrievers;
+namespace Arffornia\MinecraftOauth\DataRetrievers;
 
-use Aberdeener\MinecraftOauth\Exceptions\ResponseValidationException;
-use Aberdeener\MinecraftOauth\Exceptions\XtxsTokenRetrievalException;
+use Arffornia\MinecraftOauth\Exceptions\ResponseValidationException;
+use Arffornia\MinecraftOauth\Exceptions\XtxsTokenRetrievalException;
 use GuzzleHttp\Exception\GuzzleException;
 
 class XtxsTokenRetriever extends DataRetriever

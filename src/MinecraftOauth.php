@@ -1,16 +1,16 @@
 <?php
 
-namespace Aberdeener\MinecraftOauth;
+namespace Arffornia\MinecraftOauth;
 
-use Aberdeener\MinecraftOauth\DataRetrievers\AccessTokenRetriever;
-use Aberdeener\MinecraftOauth\Exceptions\GameOwnershipCheckException;
-use Aberdeener\MinecraftOauth\Exceptions\ResponseValidationException;
-use Aberdeener\MinecraftOauth\Exceptions\XtxsTokenRetrievalException;
-use Aberdeener\MinecraftOauth\DataRetrievers\GameOwnershipStatusRetriever;
-use Aberdeener\MinecraftOauth\DataRetrievers\MinecraftAccessTokenRetriever;
-use Aberdeener\MinecraftOauth\DataRetrievers\MinecraftProfileDataRetriever;
-use Aberdeener\MinecraftOauth\DataRetrievers\XblTokenUserHashRetriever;
-use Aberdeener\MinecraftOauth\DataRetrievers\XtxsTokenRetriever;
+use Arffornia\MinecraftOauth\DataRetrievers\AccessTokenRetriever;
+use Arffornia\MinecraftOauth\Exceptions\GameOwnershipCheckException;
+use Arffornia\MinecraftOauth\Exceptions\ResponseValidationException;
+use Arffornia\MinecraftOauth\Exceptions\XtxsTokenRetrievalException;
+use Arffornia\MinecraftOauth\DataRetrievers\GameOwnershipStatusRetriever;
+use Arffornia\MinecraftOauth\DataRetrievers\MinecraftAccessTokenRetriever;
+use Arffornia\MinecraftOauth\DataRetrievers\MinecraftProfileDataRetriever;
+use Arffornia\MinecraftOauth\DataRetrievers\XblTokenUserHashRetriever;
+use Arffornia\MinecraftOauth\DataRetrievers\XtxsTokenRetriever;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
@@ -44,9 +44,11 @@ class MinecraftOauth
                 $code,
                 urlencode($redirectUri)
             );
+        
 
         [$xblToken, $userHash] = (new XblTokenUserHashRetriever($this->client))
             ->retrieve($accessToken);
+
 
         $xtxsToken = (new XtxsTokenRetriever($this->client))
             ->retrieve($xblToken);

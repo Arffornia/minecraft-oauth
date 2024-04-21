@@ -1,9 +1,9 @@
 <?php
 
-namespace Aberdeener\MinecraftOauth\DataRetrievers;
+namespace Arffornia\MinecraftOauth\DataRetrievers;
 
-use Aberdeener\MinecraftOauth\Exceptions\GameOwnershipCheckException;
-use Aberdeener\MinecraftOauth\Exceptions\ResponseValidationException;
+use Arffornia\MinecraftOauth\Exceptions\GameOwnershipCheckException;
+use Arffornia\MinecraftOauth\Exceptions\ResponseValidationException;
 use GuzzleHttp\Exception\GuzzleException;
 
 class GameOwnershipStatusRetriever extends DataRetriever

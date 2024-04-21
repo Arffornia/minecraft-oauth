@@ -1,8 +1,8 @@
 <?php
 
-namespace Aberdeener\MinecraftOauth\DataRetrievers;
+namespace Arffornia\MinecraftOauth\DataRetrievers;
 
-use Aberdeener\MinecraftOauth\Exceptions\ResponseValidationException;
+use Arffornia\MinecraftOauth\Exceptions\ResponseValidationException;
 use GuzzleHttp\Exception\GuzzleException;
 
 class MinecraftAccessTokenRetriever extends DataRetriever
@@ -38,6 +38,7 @@ class MinecraftAccessTokenRetriever extends DataRetriever
 
         $responseJson = $this->parseJson($response);
 
+        
         $this->validateResponseJson($responseJson);
 
         return $responseJson['access_token'];

@@ -1,8 +1,8 @@
 <?php
 
-namespace Aberdeener\MinecraftOauth\DataRetrievers;
+namespace Arffornia\MinecraftOauth\DataRetrievers;
 
-use Aberdeener\MinecraftOauth\Exceptions\ResponseValidationException;
+use Arffornia\MinecraftOauth\Exceptions\ResponseValidationException;
 use GuzzleHttp\Client;
 use JsonException;
 use Psr\Http\Message\ResponseInterface;
@@ -21,7 +21,8 @@ abstract class DataRetriever
      * @throws ResponseValidationException
      */
     public function validateResponseJson(array $responseData): bool
-    {
+    {   
+        //dd($responseData);
         $original_data = $responseData;
 
         foreach ($this->expectedResponseKeys() as $expected_key) {
