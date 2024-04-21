@@ -33,6 +33,7 @@ class MinecraftAccessTokenRetriever extends DataRetriever
             ],
             'json' => [
                 'identityToken' => 'XBL3.0 x='.$userHash.';'.$xtxsToken,
+                'ensureLegacyEnabled' => true,
             ],
         ]);
 
