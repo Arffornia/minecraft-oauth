@@ -26,12 +26,14 @@ class MinecraftOauth
     }
 
     /**
+     * Fetch profile using MS OAuth UI flow.
+     *
      * @throws ResponseValidationException
      * @throws GameOwnershipCheckException
      * @throws GuzzleException
      * @throws XtxsTokenRetrievalException
      */
-    public function fetchProfile(
+    public function fetchProfileWithOAuthUI(
         string $clientId,
         string $clientSecret,
         string $code,
@@ -44,8 +46,20 @@ class MinecraftOauth
                 $code,
                 urlencode($redirectUri)
             );
-        
 
+        return $this->fetchProfileWithAccessToken($accessToken);
+    }
+
+    /**
+     * Fetch profile using MS access token.
+     *
+     * @throws ResponseValidationException
+     * @throws GameOwnershipCheckException
+     * @throws GuzzleException
+     * @throws XtxsTokenRetrievalException
+     */
+    public function fetchProfileWithAccessToken(string $accessToken): MinecraftProfile
+    {
         [$xblToken, $userHash] = (new XblTokenUserHashRetriever($this->client))
             ->retrieve($accessToken);
 
